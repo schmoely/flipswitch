@@ -1,0 +1,478 @@
+/*
+Theme Name:     FlipSwitch
+Theme URI:      http://example.com/
+Description:    StrongMind Theme (based off of Twenty Twelve theme)
+Author:         StrongMind
+Author URI:     http://strongmind.com
+Template:       twentytwelve
+Version:        1.0
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*@import url("../twentytwelve/style.css");*/
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Reset */
+
+body, html{
+	background: #fff;
+	font-family: 'Open Sans', Arial, serif;
+	font-size: 15px;
+	color: #666;
+	height: 100%;
+	margin: 0;
+}
+
+p{
+	line-height: 26px;
+	margin: 20px 0;
+}
+
+h1{
+	font-family: "Alegreya", Arial, Helvetica, sans-serif;
+	font-size: 38px;
+	color: #524e86;
+	margin: 20px 0;
+}
+
+h2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: 100;
+	color: #71c6c7;
+	margin: 30px 0 20px 0;
+	clear: both;
+}
+
+h2.sub{
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	color: #666;
+	margin-top: -10px;
+	margin-bottom: 40px;
+}
+
+h4{
+	font-size: 12px;
+	font-weight: bold;
+	color: #71c6c7;
+	margin-bottom: 10px;
+}
+
+#header{
+	position: relative;
+	background-color: #333;
+	background: url('images/chalkboard_dark.jpg');
+	width: 100%;
+	height: 125px;
+	border-bottom: solid 10px #71c6c7;
+}
+
+#header-container{
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.logo{
+	position: relative;
+	margin: 0 auto;
+}
+
+.logo img{
+	position: relative;
+	margin-top: 30px;
+}
+
+/**** Main Navigation ****/
+#main-nav {
+	float:right;
+	position: relative;
+	bottom: 9px;
+}
+
+#main-nav ul {
+}
+
+.menu-main-container > ul:first-of-type > li {
+	float:left;
+}
+/*#test > ul > li:first-child*/
+.menu-main-container > ul:first-of-type > li > a {
+	padding:10px 10px 30px 10px;
+	font-family:'Oswald', sans-serif;
+	font-size:22px;
+	font-weight: 300;
+	color:#fff;
+	text-transform:uppercase;
+	text-decoration:none;
+}
+
+.menu-item:hover .sub-menu {
+	display: block;
+}
+
+.menu-main-container > ul:first-of-type > li > a:hover {
+	color:#71c6c7;
+}
+
+/* Removed - WP added */
+.menu-toggle{ /* TEMP? */
+	display: none;
+}
+/* Removed - WP added */
+.assistive-text{ /* TEMP? */
+	display: none;
+}
+
+.sub-menu{
+	display: none;
+	position: absolute;
+	top: 36px;
+	width: 190px;
+	background: #2a2a2a;
+	z-index: 99999;
+}
+
+.sub-menu li{
+	display: block;
+	float: none;
+	margin: 0;
+	border-bottom: solid 2px #666;
+}
+
+.sub-menu li:hover {
+	background-color: #71c6c7;
+}
+
+.sub-menu li a{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #fff;
+	padding: 15px;
+	text-decoration: none;
+	display: block;
+}
+
+#resp-nav{
+	-webkit-appearance: none;
+	display: none;
+	width: 85%;
+	margin: 5px auto;
+	background-color: #71c6c7;
+	border-radius: 0px;
+	height: 25px;
+	color: #fff;
+	font-family: 'Oswald';
+	font-size: 18px;
+}
+
+#banner-row{
+	background-color: #efaf02;
+	max-height: 250px;
+	height: 250px;
+}
+
+#banner{
+	background: url('images/radial-white.png') no-repeat -10px;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.title{
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+	font-weight: 300;
+	text-align: right;
+	color: #fff;
+	margin-top: 100px;
+	padding-right: 20px;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+
+#banner-text{
+	width: 29%;
+	float: left;
+}
+
+#banner-image{
+	width: 71%;
+	max-height: 250px;
+	float: right;
+	overflow: hidden;
+}
+
+#page-content-wrapper {
+	overflow:hidden;
+	/*background:#eee;*/
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* Content areas within WP */
+#primary{
+	float: left;
+	width: 75%;
+	max-width:900px;
+	padding:20px 80px 20px 40px;
+}
+
+#secondary{
+	float: right;
+	width: 25%;
+	height: 100%;
+	background-color: #ececec;
+}
+
+/* *** */
+
+#main-content-block {
+	float:left;
+	width:75%;
+	background:#fff;
+}
+
+#main-content {
+	float:right;
+	max-width:900px;
+	padding:20px 80px 20px 40px;
+}
+
+#footer{
+	background-color: #333;
+	background: url('images/chalkboard_dark.jpg');
+	width: 100%;
+	height: 210px;
+	/*margin-top: -210px;*/
+	border-top: solid 10px #71c6c7;
+	padding: 30px 10%;
+	float: left;
+}
+
+#footer-left{
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+
+#footer-left li{
+	font-size: 12px;
+	font-weight: 300;
+	color: #fff;
+	line-height: 18px;
+}
+
+#footer-right{
+	/*background: url('images/fs_icon.png') no-repeat top left;*/
+	width: 40%;
+	height: 100%;
+	float: right;
+}
+
+#footer-right p{
+	color: #71c6c7;
+	display: inline-block;
+	line-height: 18px;
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+.footer-logo{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+}
+
+.footer-menu{
+	display: inline-block;
+	width: 18%;
+	vertical-align: text-top;
+}
+
+/**** Sidebar ****/
+#sidebar-block {
+	background:#f8f8f8;
+	/*float:left;
+	width:25%;*/
+	height: 100%;
+	border-left: solid 2px #f0f0f0;
+}
+
+#sidebar {
+	float:left;
+	max-width:260px;
+	padding:20px;
+}
+
+.sidebar-box{
+	background-color: #ececec;
+	border: solid 7px #fff;
+	padding:20px 20px 20px 20px;
+	margin-top: 20px;
+	overflow: auto;
+	-moz-box-shadow:    0px 2px 4px 2px #ccc;
+  	-webkit-box-shadow: 0px 2px 4px 2px #ccc;
+  	box-shadow:         0px 2px 4px 2px #ccc;
+}
+
+.sidebar-header{
+	overflow: auto;
+}
+
+.sidebar-box img{
+	float: left;
+	width: 25%;
+}
+
+.sidebar-box h2{
+	font-size: 18px;
+	line-height: 22px;
+	color: #ea6300;
+	text-transform: uppercase;
+	float: left;
+	clear: none;
+	margin: 0px 0px 0px 10px;
+}
+
+.sidebar-box p{
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.sidebar-text{
+	clear: left;
+	margin-top: 20px;
+}
+
+.req-info{
+	background: url('images/req-info-icon.png') no-repeat 15px;
+	background-size: 25%;
+
+}
+
+.lets-talk{
+	background: url('images/phone-icon.png') no-repeat 15px 25px;
+	background-size: 25%;
+
+}
+
+.block{
+	margin: 20px 0;
+	overflow: auto;
+}
+
+.call-out{
+	color: #fff;
+	margin: 0 20px;
+	padding: 0 30px 30px 30px;
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  	-webkit-border-radius: 10px;
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 10px;
+}
+
+.call-out h2{
+	color: #fff;
+}
+
+.call-out li{
+	list-style-type: disc;
+	line-height: 24px;
+	margin-left: 20px;
+}
+
+.image{
+	margin: 20px;
+}
+
+hr.boxes {
+	background: url('images/sep-boxes.png') repeat-x 2px;
+    border: 0;
+    height: 11px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+/**** Misc Attributes ****/
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+.orange{
+	background-color: #ea6300;
+}
+
+.outline{
+	border: solid 6px #fff;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.orange-text{
+	color: #ea6300;
+}
+
+.shadow {
+  -moz-box-shadow:    0px 2px 9px 2px #333;
+  -webkit-box-shadow: 0px 2px 9px 2px #333;
+  box-shadow:         0px 2px 9px 2px #333;
+}
+
